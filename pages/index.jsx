@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
 import Card from "../components/Card";
 import { Box, Container } from "@mui/system";
+import Datatable from "../components/Datatable";
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -29,10 +29,7 @@ const Home: NextPage = () => {
         src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
         crossOrigin="anonymous"
       ></Script>
-
-      <Container>
-        <Card color="danger">Success card</Card>
-      </Container>
+      <Datatable />
     </div>
   );
 };
