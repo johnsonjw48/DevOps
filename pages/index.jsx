@@ -3,6 +3,7 @@ import Datatable from "../components/Datatable";
 import Card from "../components/Card";
 import Chart from "../components/Chart";
 import Box from "@mui/material/Box";
+import { data, data2, options } from "../assets/utils";
 
 const Home = () => {
   return (
@@ -17,6 +18,16 @@ const Home = () => {
         <Card color="success">Success Card</Card>
         <Card color="danger">Danger Card</Card>
       </div>
+
+      <div>
+        <Chart
+          chartData={data}
+          options={options}
+          barData={data2}
+          barOptions={options}
+        />
+      </div>
+
       <Datatable></Datatable>
       {/* <Chart></Chart> */}
     </div>
