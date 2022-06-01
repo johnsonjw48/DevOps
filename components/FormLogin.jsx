@@ -2,8 +2,8 @@ const FormLogin = () => {
     return (             
         
             <div className="bg-primary">
-                <div className="layoutAuthentication">
-                    <div className="layoutAuthentication_content">
+                <div id="layoutAuthentication">
+                    <div id="layoutAuthentication_content">
                         <main>
                             <div className="container">
                                 <div className="row justify-content-center">
