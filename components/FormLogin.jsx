@@ -51,7 +51,7 @@ const FormLogin = () => {
                           <a className="small" href="password.html">
                             Forgot Password?
                           </a>
-                          <a className="btn btn-primary" href="index.html">
+                          <a className="btn btn-primary" href="/">
                             Login
                           </a>
                         </div>
