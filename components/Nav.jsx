@@ -251,7 +251,7 @@ const Nav = ({ children }) => {
                     </nav>
                   </div>
                   <div className="sb-sidenav-menu-heading">Addons</div>
-                  <a className="nav-link" href="charts.html">
+                  <a className="nav-link" href="Charts">
                     <div className="sb-nav-link-icon">
                       <i className="fas fa-chart-area"></i>
                     </div>
