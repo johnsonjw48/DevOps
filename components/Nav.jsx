@@ -274,7 +274,7 @@ const Nav = ({ children }) => {
                     </div>
                     Charts
                   </a>
-                  <a className="nav-link" href="tables.html">
+                  <a className="nav-link" href="tables">
                     <div className="sb-nav-link-icon">
                       <i className="fas fa-table"></i>
                     </div>
