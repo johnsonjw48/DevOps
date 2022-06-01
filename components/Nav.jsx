@@ -5,9 +5,9 @@ const Nav = ({ children }) => {
     return () => {
       const sidebarToggle = document.body.querySelector("#sidebarToggle");
       const sidenavAccordion = document.body.querySelector("#sidenavAccordion");
-      console.log('href', window.location.href)
+      console.log("href", window.location.href);
       if (sidebarToggle) {
-        console.log('sidebar', sidebarToggle);
+        console.log("sidebar", sidebarToggle);
         // Uncomment Below to persist sidebar toggle between refreshes
         /*if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
           document.body.classList.toggle('sb-sidenav-toggled');
@@ -22,14 +22,15 @@ const Nav = ({ children }) => {
         });
       }
 
-      if(window.location.href === "http://localhost:3000/Layouts/lightSidenav") {
-        if(sidenavAccordion) {
-          sidenavAccordion.className = "sb-sidenav accordion sb-sidenav-light"
+      if (
+        window.location.href === "http://localhost:3000/Layouts/lightSidenav"
+      ) {
+        if (sidenavAccordion) {
+          sidenavAccordion.className = "sb-sidenav accordion sb-sidenav-light";
         }
       }
     };
   }, []);
-
 
   /*useEffect(() => {
     if (!document) return;
@@ -52,8 +53,10 @@ const Nav = ({ children }) => {
   }, []);*/
   return (
     <>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                crossOrigin="anonymous"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossOrigin="anonymous"
+      ></script>
 
       <div className="sb-nav-fixed">
         <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -165,7 +168,11 @@ const Nav = ({ children }) => {
                       <a className="nav-link" href="/Layouts/staticNavigation">
                         Static Navigation
                       </a>
-                      <a id="lightSidenav" className="nav-link" href="/Layouts/lightSidenav">
+                      <a
+                        id="lightSidenav"
+                        className="nav-link"
+                        href="/Layouts/lightSidenav"
+                      >
                         Light Sidenav
                       </a>
                     </nav>
@@ -216,13 +223,13 @@ const Nav = ({ children }) => {
                         data-bs-parent="#sidenavAccordionPages"
                       >
                         <nav className="sb-sidenav-menu-nested nav">
-                          <a className="nav-link" href="login.html">
+                          <a className="nav-link" href="login">
                             Login
                           </a>
-                          <a className="nav-link" href="register.html">
+                          <a className="nav-link" href="register">
                             Register
                           </a>
-                          <a className="nav-link" href="password.html">
+                          <a className="nav-link" href="password">
                             Forgot Password
                           </a>
                         </nav>
@@ -267,7 +274,7 @@ const Nav = ({ children }) => {
                     </div>
                     Charts
                   </a>
-                  <a className="nav-link" href="tables.html">
+                  <a className="nav-link" href="tables">
                     <div className="sb-nav-link-icon">
                       <i className="fas fa-table"></i>
                     </div>
@@ -281,11 +288,26 @@ const Nav = ({ children }) => {
               </div>
             </nav>
           </div>
-          <div id="layoutSidenav_content">{children}</div>
+          <div id="layoutSidenav_content">
+            {children}
+            <footer className="py-4 bg-light mt-auto">
+              <div className="container-fluid px-4">
+                <div className="d-flex align-items-center justify-content-between small">
+                  <div className="text-muted">
+                    Copyright &copy; Your Website 2022
+                  </div>
+                  <div>
+                    <a href="#">Privacy Policy</a>
+                    &middot;
+                    <a href="#">Terms &amp; Conditions</a>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </>
-
   );
 };
 
