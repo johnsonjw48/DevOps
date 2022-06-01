@@ -11,7 +11,7 @@ const Home = () => {
         href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
         rel="stylesheet"
       />
-      <div>
+      <div className="row">
         <Card color="primary">Primary Card</Card>
         <Card color="secondary">Secondary Card</Card>
         <Card color="success">Success Card</Card>
