@@ -16,7 +16,7 @@ const LightSidenav = () => {
                     <h1 className="display-1">401</h1>
                     <p className="lead">Unauthorized</p>
                     <p>Access to this resource is denied.</p>
-                    <a href="index.html">
+                    <a href="/">
                       <i className="fas fa-arrow-left me-1"></i>
                       Return to Dashboard
                     </a>
