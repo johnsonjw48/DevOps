@@ -4,6 +4,8 @@ const Nav = ({ children }) => {
   useEffect(() => {
     return () => {
       const sidebarToggle = document.body.querySelector("#sidebarToggle");
+      const sidenavAccordion = document.body.querySelector("#sidenavAccordion");
+      console.log('href', window.location.href)
       if (sidebarToggle) {
         console.log('sidebar', sidebarToggle);
         // Uncomment Below to persist sidebar toggle between refreshes
@@ -18,6 +20,12 @@ const Nav = ({ children }) => {
             document.body.classList.contains("sb-sidenav-toggled")
           );
         });
+      }
+
+      if(window.location.href === "http://localhost:3000/Layouts/lightSidenav") {
+        if(sidenavAccordion) {
+          sidenavAccordion.className = "sb-sidenav accordion sb-sidenav-light"
+        }
       }
     };
   }, []);
@@ -154,10 +162,10 @@ const Nav = ({ children }) => {
                     data-bs-parent="#sidenavAccordion"
                   >
                     <nav className="sb-sidenav-menu-nested nav">
-                      <a className="nav-link" href="/staticNavigation">
+                      <a className="nav-link" href="/Layouts/staticNavigation">
                         Static Navigation
                       </a>
-                      <a className="nav-link" href="layout-sidenav-light.html">
+                      <a id="lightSidenav" className="nav-link" href="/Layouts/lightSidenav">
                         Light Sidenav
                       </a>
                     </nav>

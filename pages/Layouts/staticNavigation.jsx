@@ -1,6 +1,4 @@
-import styles from "../styles/Home.module.css";
-import Datatable from "../components/Datatable";
-import Card from "../components/Card";
+import styles from "../../styles/Home.module.css";
 
 const StaticNavigation = () => {
   return (
