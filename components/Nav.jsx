@@ -2,13 +2,36 @@ import { useEffect } from "react";
 
 const Nav = ({ children }) => {
   useEffect(() => {
+    return () => {
+      const sidebarToggle = document.body.querySelector("#sidebarToggle");
+      if (sidebarToggle) {
+        console.log('sidebar', sidebarToggle);
+        // Uncomment Below to persist sidebar toggle between refreshes
+        if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+          document.body.classList.toggle('sb-sidenav-toggled');
+        }
+        sidebarToggle.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.body.classList.toggle("sb-sidenav-toggled");
+          localStorage.setItem(
+            "sb|sidebar-toggle",
+            document.body.classList.contains("sb-sidenav-toggled")
+          );
+        });
+      }
+    };
+  }, []);
+
+
+  /*useEffect(() => {
     if (!document) return;
     const sidebarToggle = document.body.querySelector("#sidebarToggle");
+    console.log(sidebarToggle);
     if (sidebarToggle) {
       // Uncomment Below to persist sidebar toggle between refreshes
-      // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-      //     document.body.classList.toggle('sb-sidenav-toggled');
-      // }
+      if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+           document.body.classList.toggle('sb-sidenav-toggled');
+      }
       sidebarToggle.addEventListener("click", (event) => {
         event.preventDefault();
         document.body.classList.toggle("sb-sidenav-toggled");
@@ -18,7 +41,7 @@ const Nav = ({ children }) => {
         );
       });
     }
-  });
+  }, []);*/
   return (
     <div className="sb-nav-fixed">
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -97,7 +120,7 @@ const Nav = ({ children }) => {
             <div className="sb-sidenav-menu">
               <div className="nav">
                 <div className="sb-sidenav-menu-heading">Core</div>
-                <a className="nav-link" href="index.html">
+                <a className="nav-link" href="/">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
@@ -127,7 +150,7 @@ const Nav = ({ children }) => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="layout-static.html">
+                    <a className="nav-link" href="/staticNavigation">
                       Static Navigation
                     </a>
                     <a className="nav-link" href="layout-sidenav-light.html">
