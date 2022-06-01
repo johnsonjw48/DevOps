@@ -24,7 +24,7 @@ const Nav = ({ children }) => {
       }
 
       if (
-        window.location.href === "https://dev-8tyoqgvcl-johnsonjw48.vercel.app/Layouts/lightSidenav"
+        window.location.href === `${window.origin}/Layouts/lightSidenav`
       ) {
         if (sidenavAccordion) {
           sidenavAccordion.className = "sb-sidenav accordion sb-sidenav-light";
