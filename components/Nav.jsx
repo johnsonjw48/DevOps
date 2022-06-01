@@ -9,9 +9,9 @@ const Nav = ({ children }) => {
       if (sidebarToggle) {
         console.log('sidebar', sidebarToggle);
         // Uncomment Below to persist sidebar toggle between refreshes
-        if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+        /*if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
           document.body.classList.toggle('sb-sidenav-toggled');
-        }
+        }*/
         sidebarToggle.addEventListener("click", (event) => {
           event.preventDefault();
           document.body.classList.toggle("sb-sidenav-toggled");
@@ -250,10 +250,10 @@ const Nav = ({ children }) => {
                           <a className="nav-link" href="/Error/401Page">
                             401 Page
                           </a>
-                          <a className="nav-link" href="404.html">
+                          <a className="nav-link" href="/Error/404Page">
                             404 Page
                           </a>
-                          <a className="nav-link" href="500.html">
+                          <a className="nav-link" href="/Error/500Page">
                             500 Page
                           </a>
                         </nav>
