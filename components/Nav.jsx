@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Script from "next/script";
+import Link from "next/link";
 
 const Nav = ({ children }) => {
   useEffect(() => {
@@ -32,31 +34,12 @@ const Nav = ({ children }) => {
     };
   }, []);
 
-  /*useEffect(() => {
-    if (!document) return;
-    const sidebarToggle = document.body.querySelector("#sidebarToggle");
-    console.log(sidebarToggle);
-    if (sidebarToggle) {
-      // Uncomment Below to persist sidebar toggle between refreshes
-      if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-           document.body.classList.toggle('sb-sidenav-toggled');
-      }
-      sidebarToggle.addEventListener("click", (event) => {
-        event.preventDefault();
-        document.body.classList.toggle("sb-sidenav-toggled");
-        localStorage.setItem(
-          "sb|sidebar-toggle",
-          document.body.classList.contains("sb-sidenav-toggled")
-        );
-      });
-    }
-  }, []);*/
   return (
     <>
-      <script
+      <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossOrigin="anonymous"
-      ></script>
+      ></Script>
 
       <div className="sb-nav-fixed">
         <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">

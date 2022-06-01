@@ -26,26 +26,26 @@ ChartJS.register(
 
 const Chart = ({ chartData, options, barData, barOptions }) => {
   return (
-    <div class="row">
-      <div class="col-xl-6">
-        <div class="card mb-4">
-          <div class="card-header">
-            <i class="fas fa-chart-area me-1"></i>
+    <div className="row">
+      <div className="col-xl-6">
+        <div className="card mb-4">
+          <div className="card-header">
+            <i className="fas fa-chart-area me-1"></i>
             Area Chart Example
           </div>
-          <div class="card-body">
+          <div className="card-body">
             {" "}
             <Line data={chartData} options={options} />
           </div>
         </div>
       </div>
-      <div class="col-xl-6">
-        <div class="card mb-4">
-          <div class="card-header">
-            <i class="fas fa-chart-bar me-1"></i>
+      <div className="col-xl-6">
+        <div className="card mb-4">
+          <div className="card-header">
+            <i className="fas fa-chart-bar me-1"></i>
             Bar Chart Example
           </div>
-          <div class="card-body">
+          <div className="card-body">
             <Bar data={barData} options={barOptions} />
           </div>
         </div>
