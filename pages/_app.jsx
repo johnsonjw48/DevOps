@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   const [href, setHref] = useState(null);
   useEffect(() => {
     return () => {
-      setHref(window.location.href.startsWith("http://localhost:3000/Error/"))
+      setHref(window.location.href.startsWith("https://dev-8tyoqgvcl-johnsonjw48.vercel.app/Error/"))
     };
   }, []);
 
