@@ -112,3 +112,13 @@ export const options2 = {
     display: false,
   },
 };
+
+export const data3 = {
+  labels: ["Blue", "Red", "Yellow", "Green"],
+  datasets: [
+    {
+      data: [12.21, 15.58, 11.25, 8.32],
+      backgroundColor: ["#007bff", "#dc3545", "#ffc107", "#28a745"],
+    },
+  ],
+};
