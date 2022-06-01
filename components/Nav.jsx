@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Script from "next/script";
-import Link from "next/link";
 
 const Nav = ({ children }) => {
   useEffect(() => {
@@ -43,7 +42,7 @@ const Nav = ({ children }) => {
 
       <div className="sb-nav-fixed">
         <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-          <a className="navbar-brand ps-3" href="index.html">
+          <a className="navbar-brand ps-3" href="/">
             Start Bootstrap
           </a>
           <button
