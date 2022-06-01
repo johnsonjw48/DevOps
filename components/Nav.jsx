@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Script from "next/script";
-import Link from "next/link";
 
 const Nav = ({ children }) => {
   useEffect(() => {
