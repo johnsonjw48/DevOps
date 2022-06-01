@@ -23,15 +23,13 @@ const Nav = ({ children }) => {
         });
       }
 
-      if (
-        window.location.href === `${window.origin}/Layouts/lightSidenav`
-      ) {
+      if (window.location.href === `${window.origin}/Layouts/lightSidenav`) {
         if (sidenavAccordion) {
           sidenavAccordion.className = "sb-sidenav accordion sb-sidenav-light";
         }
       }
     };
-  }, []);
+  });
 
   return (
     <>
