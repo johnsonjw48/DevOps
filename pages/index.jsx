@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 import { data, data2, options } from "../assets/utils";
 
 const Home = () => {
+
+
   return (
     <div className={styles.container}>
       <link
@@ -29,7 +31,6 @@ const Home = () => {
       </div>
 
       <Datatable></Datatable>
-      {/* <Chart></Chart> */}
     </div>
   );
 };

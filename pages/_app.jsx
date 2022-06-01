@@ -3,8 +3,16 @@ import Nav from "../components/Nav";
 import Script from "next/script";
 import Head from "next/head";
 import "../css/styles.css";
+import {useEffect, useState} from "react";
 
 function MyApp({ Component, pageProps }) {
+  const [href, setHref] = useState(null);
+  useEffect(() => {
+    return () => {
+      setHref(window.location.href.startsWith("http://localhost:3000/Error/"))
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -23,9 +31,14 @@ function MyApp({ Component, pageProps }) {
         src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
         crossOrigin="anonymous"
       ></Script>
-      <Nav>
-        <Component {...pageProps} />
-      </Nav>
+      { href ? (
+          <Component {...pageProps} />
+      ) : (
+        <Nav>
+          <Component {...pageProps} />
+        </Nav>
+      )}
+
     </>
   );
 }
