@@ -247,7 +247,7 @@ const Nav = ({ children }) => {
                         data-bs-parent="#sidenavAccordionPages"
                       >
                         <nav className="sb-sidenav-menu-nested nav">
-                          <a className="nav-link" href="401.html">
+                          <a className="nav-link" href="/Error/401Page">
                             401 Page
                           </a>
                           <a className="nav-link" href="404.html">
